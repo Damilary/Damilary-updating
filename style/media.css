@@ -1,0 +1,684 @@
+/* Devise Responsiveness */
+@media(min-width: 1200px) {
+
+    .home-content h1,
+    .txt-type>.txt {
+        font-size: 6rem;
+        color: var(--main-color-light);
+    }
+
+    .home-content .home-description,
+    .banner-contact .btn {
+        font-size: 1.2rem;
+    }
+}
+
+@media(max-width: 1000px) {
+    .description p {
+        max-width: 450px;
+        font-size: 1.1rem;
+        margin-bottom: 0.2rem;
+    }
+}
+
+@media (max-width: 1199.99px) {
+    .home-content span {
+        font-size: 1.3rem;
+        font-weight: 600;
+    }
+
+    .home-content h1,
+    .txt-type>.txt {
+        font-size: 4.5rem;
+        font-weight: 700;
+    }
+
+    .home-content .home-description,
+    .banner-contact .btn {
+        font-size: 1.2rem;
+    }
+
+    .form-head p {
+        font-size: 3rem;
+    }
+
+    .contact-form {
+        margin: 0 15% 0;
+    }
+
+    .contact-form form {
+        margin: 0 5%;
+    }
+
+    form input:focus,
+    form textarea:focus {
+        font-size: 1.2rem;
+    }
+
+    .contact-btn .contact-button {
+        font-size: 1.6rem;
+    }
+
+    .damilary-logo .damilary-logo-link {
+        font-size: 2.8rem;
+    }
+
+    .description p {
+        max-width: 300px;
+        font-size: 1.2rem;
+        margin-bottom: 0.2rem;
+    }
+
+    .footer-social {
+        gap: 0.7rem;
+    }
+
+    .footer-social-svg {
+        width: 28px;
+    }
+
+    .navigation ul li {
+        width: 120px;
+    }
+
+    .footer-navigator {
+        row-gap: 1.2rem;
+    }
+
+    .footer-navigator a {
+        font-size: 1.1rem;
+    }
+
+    .footer-navigator a:hover {
+        padding-left: 0.8rem;
+    }
+}
+
+
+@media (max-width: 1010.99px) {
+    nav {
+        padding: 1rem 5%;
+    }
+
+    section {
+        padding: 50px 4%;
+    }
+
+    :root {
+        --big-font: 2.4rem;
+        --medium-font: 1.2rem;
+    }
+
+    .home-content span {
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+
+    .home-content h1,
+    .txt-type>.txt {
+        font-size: 4rem;
+        font-weight: 700;
+    }
+
+    .home-content .home-description {
+        font-size: 1.1rem;
+    }
+
+    .banner-contact .btn {
+        font-size: 1.2rem;
+    }
+
+    .skills {
+        margin: 80px 6%;
+    }
+
+    .skills-img {
+        padding-top: 0.4rem;
+    }
+
+    .skills-btn {
+        justify-content: center;
+    }
+
+    .services,
+    .portfolio,
+    .about {
+        margin: 0px 6% 80px;
+        padding: 0px;
+    }
+
+    .about-text {
+        padding: 0% 5% 2%;
+    }
+
+    .about-img {
+        width: 100%;
+    }
+
+    .contact {
+        padding: 5% 6% 10%;
+    }
+
+    .contact-wrapper {
+        padding: 5% 0% 5%;
+    }
+
+    .form-head p {
+        font-size: 2.8rem;
+    }
+
+    .contact-form {
+        margin: 0 12% 0;
+    }
+
+    .contact-form form {
+        margin: 0 10%;
+    }
+
+    form input:focus,
+    form textarea:focus {
+        font-size: 1rem;
+    }
+
+    .contact-btn .contact-button {
+        font-size: 1.5rem;
+    }
+
+    .footer-container {
+        padding: 2.5rem 6%;
+    }
+
+    .damilary-logo .damilary-logo-link {
+        font-size: 2.5rem;
+    }
+
+    .description p {
+        max-width: 350px;
+        font-size: 1.1rem;
+    }
+
+    .navigation ul li {
+        width: 100px;
+    }
+
+    .footer-navigator {
+        row-gap: 1rem;
+        margin-top: 3%;
+    }
+
+    .footer-navigator a {
+        font-size: 1rem;
+    }
+
+    .footer-navigator a:hover {
+        padding-left: 0.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --big-font: 2.4rem;
+        --medium-font: 1.2rem;
+    }
+
+    header {
+        padding: 11px 4%;
+    }
+
+    #menu-icon {
+        display: initial;
+        color: var(--text-color);
+    }
+
+    header .navbar {
+        position: absolute;
+        top: -500px;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        background: var(--bg-color);
+        box-shadow: 0 4px 4px rgb(0 0 0 / 10%);
+        text-align: center;
+        -webkit-transition: 0.2s ease;
+        -moz-transition: 0.2s ease;
+        -ms-transition: 0.2s ease;
+        -o-transition: 0.2s ease;
+        transition: 0.2s ease;
+    }
+
+    .navbar.active {
+        top: 100%;
+    }
+
+    .navbar li {
+        padding: 1.5rem;
+        display: inline-block;
+        background: var(--bg-color);
+    }
+
+    .navbar li.active a {
+        background-color: var(--bg-color);
+        color: var(--text-color-black);
+    }
+
+    .navbar li.active a:hover {
+        background-color: var(--hover-blue);
+        color: var(--text-color-white);
+    }
+
+    #darkmode {
+        position: absolute;
+        top: 1.4rem;
+        right: 2rem;
+    }
+
+    .home-content span {
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+
+    .home-content h1 {
+        font-size: 4rem;
+        font-weight: 700;
+    }
+
+    .txt-type>.txt {
+        font-size: 4rem;
+        font-weight: 700;
+    }
+
+    .home-content .home-description {
+        font-size: 1.2rem;
+        font-weight: 400;
+        padding: 0.7rem 3rem 1rem 3rem;
+    }
+
+    .banner-contact .btn {
+        font-size: 1.2rem;
+    }
+
+    #down-icon {
+        padding: 45px 15px 30px;
+    }
+
+    .skills {
+        margin: 80px 6%;
+    }
+
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-img {
+        padding-top: 0.4rem;
+    }
+
+    .skills-btn {
+        justify-content: center;
+    }
+
+    .services,
+    .portfolio,
+    .about {
+        margin: 0px 6% 80px;
+        padding: 0px;
+    }
+
+    .about-container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .about-text {
+        padding: 0% 5% 2%;
+    }
+
+    .about-img {
+        padding: 5% 5% 0;
+        width: 80%;
+    }
+
+    .about-img img {
+        width: 100%;
+        cursor: grab;
+        -webkit-border-radius: 1rem;
+        -moz-border-radius: 1rem;
+        -ms-border-radius: 1rem;
+        -o-border-radius: 1rem;
+        border-radius: 1rem;
+    }
+
+    .contact {
+        padding: 5% 6% 10%;
+    }
+
+    .contact-wrapper {
+        padding: 5% 0% 5%;
+    }
+
+    .form-head p {
+        font-size: 2.5rem;
+    }
+
+    .contact-form {
+        margin: 0 10% 0;
+    }
+
+    .contact-form form {
+        margin: 0 5%;
+    }
+
+    form input:focus,
+    form textarea:focus {
+        font-size: 1rem;
+    }
+
+    .contact-btn .contact-button {
+        font-size: 1.5rem;
+    }
+
+    .footer-container {
+        padding: 2.5rem 6%;
+    }
+
+    .damilary-logo .damilary-logo-link {
+        font-size: 2.5rem;
+    }
+
+    .description p {
+        font-size: 1rem;
+    }
+
+    .footer-social {
+        gap: 0.6rem;
+    }
+
+    .footer-social-svg {
+        width: 25px;
+    }
+
+    .navigation ul li {
+        width: 100px;
+    }
+
+    .footer-navigator {
+        row-gap: 1rem;
+        margin-top: 3%;
+    }
+
+    .footer-navigator a {
+        font-size: 1rem;
+    }
+
+    .footer-navigator a:hover {
+        padding-left: 0.5rem;
+    }
+
+    .copyright p,
+    .copyright p a {
+        font-size: small;
+    }
+}
+
+@media (max-width: 699.99px) {
+    :root {
+        --big-font: 2rem;
+        --medium-font: 1rem;
+    }
+
+    .home-content span {
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+
+    .home-content h1,
+    .txt-type>.txt {
+        font-size: 3.5rem;
+        color: var(--main-color-light);
+    }
+
+    .home-content .home-description,
+    .banner-contact .btn {
+        font-size: 1.3rem;
+    }
+
+    .form-head p {
+        font-size: 2.2rem;
+    }
+
+    input::-webkit-input-placeholder,
+    textarea::-webkit-input-placeholder {
+        font-size: 0.950rem;
+    }
+
+    .contact-btn .contact-button {
+        font-size: 1.4rem;
+    }
+
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 2.5rem 6%;
+        background: var(--skyblue);
+    }
+
+    .damilary-logo .damilary-logo-link {
+        font-size: 2.3rem;
+    }
+
+    .description p {
+        max-width: max-content;
+        font-size: 1.2rem;
+    }
+
+    .footer-social-svg {
+        width: 28px;
+    }
+
+    .footer-navigator {
+        row-gap: 1rem;
+        margin-top: 5%;
+    }
+
+    .footer-navigator a {
+        font-size: 1rem;
+    }
+
+    .footer-navigator a:hover {
+        padding-left: 0.5rem;
+    }
+
+    .copyright p,
+    .copyright p a {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 601px) {
+    :root {
+        --big-font: 1.8rem;
+        --medium-font: 8rem;
+    }
+
+    .home-content span {
+        font-size: 1.3rem;
+        font-weight: 600;
+    }
+
+    .home-content h1,
+    .txt-type>.txt {
+        font-size: 3rem;
+        color: var(--main-color-light);
+    }
+
+    .home-content .home-description,
+    .banner-contact .btn {
+        font-size: 1.2rem;
+    }
+
+    .form-head p {
+        font-size: 1.9rem;
+    }
+
+    input::-webkit-input-placeholder,
+    textarea::-webkit-input-placeholder {
+        font-size: 0.9rem;
+    }
+
+    .contact-btn .contact-button {
+        font-size: 1.3rem;
+    }
+
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 2.5rem 6%;
+        background: var(--skyblue);
+    }
+
+    .damilary-logo .damilary-logo-link {
+        font-size: 2.2rem;
+    }
+
+    .description p {
+        max-width: 500px;
+        font-size: 1rem;
+    }
+
+    .footer-social-svg {
+        width: 28px;
+    }
+
+    .footer-navigator {
+        row-gap: 1rem;
+        margin-top: 5%;
+    }
+
+    .footer-navigator a {
+        font-size: 1rem;
+    }
+
+    .footer-navigator a:hover {
+        padding-left: 0.5rem;
+    }
+
+    .copyright p,
+    .copyright p a {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 500px) {
+    :root {
+        --big-font: 1.5rem;
+        --medium-font: 6rem;
+    }
+
+    .home-content span {
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+
+    .home-content h1,
+    .txt-type>.txt {
+        font-size: 2.5rem;
+        color: var(--main-color-light);
+    }
+
+    .home-content .home-description,
+    .banner-contact .btn {
+        font-size: 1rem;
+    }
+
+    .skills {
+        margin: 50px 6%;
+    }
+
+    .skills-container,
+    .services-content,
+    .portfolio-content {
+        margin-top: 0.6rem;
+    }
+
+    .portfolio-img img {
+        aspect-ratio: 3/2;
+    }
+
+    .information .info-box span {
+        font-size: 1rem;
+    }
+
+    .wrapper {
+        padding: 0.5rem 5%;
+    }
+
+    .form-head p {
+        font-size: 1.650rem;
+    }
+
+    .contact-form {
+        margin: 0 4% 0;
+    }
+
+    .contact-form form {
+        margin: 0 8%;
+    }
+
+    form input:focus,
+    form textarea:focus {
+        font-size: 1rem;
+    }
+
+    input::-webkit-input-placeholder,
+    textarea::-webkit-input-placeholder {
+        font-size: 0.8rem;
+    }
+
+    .contact-btn .contact-button {
+        font-size: 1.2rem;
+    }
+
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 2.5rem 6%;
+        background: var(--skyblue);
+    }
+
+
+    .damilary-logo .damilary-logo-link {
+        font-size: 2rem;
+    }
+
+    .description p {
+        max-width: 500px;
+        font-size: 1rem;
+    }
+
+    .footer-social-svg {
+        width: 26px;
+    }
+
+    .footer-navigator {
+        row-gap: 1rem;
+        margin-top: 5%;
+    }
+
+    .footer-navigator a {
+        font-size: 1rem;
+    }
+
+    .footer-navigator a:hover {
+        padding-left: 0.5rem;
+    }
+
+    .copyright p,
+    .copyright p a {
+        font-size: 0.750rem;
+    }
+}

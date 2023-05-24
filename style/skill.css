@@ -1,0 +1,221 @@
+/* google font*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: "poppins", sans-serif;
+}
+
+p {
+    margin: 0px;
+}
+
+body {
+    /* paddind: top, right, bottom, left; */
+    /* this style below will be inherited */
+    font-family: "poppins", sans-serif;
+    color: var(--text-color-balck);
+    cursor: default;
+}
+
+:root {
+    /* root propertise like colors, bg images, font */
+    --nav: #fafafa;
+    --form: #fafafa;
+    --white: #fff;
+    --bg-color: #f6f6fa;
+    --main-color: #1e56a0;
+    --main-color-light: #3f71ea;
+    --main-color-lighter: #b1cbe2;
+    --skyblue: #eff3f6;
+
+    --text-color-blue: #1e56a0;
+    --text-color-green: rgb(2, 166, 70);
+    --text-color-balck: #070b0e;
+    --text-color-white: #fbfdfe;
+
+
+    --hover-blue: #1e56a0;
+    --hover-light: #3f71ea;
+
+
+    --service-box: #22cf91;
+
+
+    --background-image: url(https://images.unsplash.com/photo-1491895200222-0fc4a4c35e18?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80);
+
+
+    --transition: all ease-in-out 0.2s;
+    --transition-2: all ease-in-out 0.4s;
+    --box-shadow: -3px -3px 7px #ffffff73, 2px 2px 5px rgba(94, 104, 121, 0.288);
+    --box-shadow-section: 1px 1px 20px rgba(235, 232, 232, 0.5), 1px 1px 20px rgba(231, 231, 231, 0.5);
+
+
+    --big-font: 3.2rem;
+    --medium-font: 1.8rem;
+    --p-font: 0.941rem;
+}
+
+/* Darkmode */
+body.active {
+    /* Darkmode root propertise like colors, bg images, font */
+    background-color: #070b0e;
+    --nav: #fafafa;
+    --form: #a7e6ff;
+    --white: #fff;
+    --bg-color: #2a2b36;
+    --main-color: #1e56a0;
+    --main-color-light: #3f71ea;
+    --main-color-lighter: #b1cbe2;
+
+
+    --text-color-blue: #1e56a0;
+    --text-color-green: rgb(2, 166, 70);
+    --text-color-balck: #070b0e;
+    --text-color-white: #fbfdfe;
+
+
+    --hover-blue: #1e56a0;
+    --hover-light: #3f71ea;
+
+
+    --service-box: #22cf91;
+
+
+    --background-image: url(https://images.unsplash.com/photo-1512551980832-13df02babc9e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80);
+
+
+    --transition: all ease-out 0.5s;
+    --transition-2: all ease-in-out 0.8s;
+    --box-shadow: -3px -3px 7px #ffffff73, 2px 2px 5px rgba(94, 104, 121, 0.288);
+    --box-shadow-section: none;
+
+
+    --big-font: 3.2rem;
+    --medium-font: 1.8rem;
+    --p-font: 0.941rem;
+
+}
+
+section {
+    padding: 50px 10%;
+}
+
+*::section {
+    color: var(--text-color-white);
+    background: var(--bg-color);
+}
+
+/* The same border-radius and transition */
+.skills-btn .btn{
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.navbar a,
+.navbar a:hover,
+.navbar a:active,
+.navbar:focus,
+.navbar:visited {
+    -webkit-border-radius: 0.9rem;
+    -moz-border-radius: 0.9rem;
+    -ms-border-radius: 0.9rem;
+    -o-border-radius: 0.9rem;
+    border-radius: 0.9rem;
+}
+
+nav,
+.navbar a,
+.skills,
+.damilary-logo-link:hover,
+.damilary-logo-link:active,
+.footer-navigator a:hover,
+.footer-navigator:active,
+.copyright a {
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+    transition: var(--transition);
+}
+
+.skills {
+    padding-top: 3%;
+}
+
+/* =================== Navigation ================= */
+nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    background: var(--nav);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 10%;
+    box-shadow: var(--box-shadow);
+}
+
+.wrapper-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.logo {
+    width: 45px;
+    height: fit-content;
+    fill: var(--main-color);
+}
+
+.damilary {
+    font-size: 1.61rem;
+    font-weight: 600;
+    color: var(--main-color);
+}
+
+.navbar {
+    display: flex;
+    gap: 0.8rem;
+}
+
+.navbar a {
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.6rem 1.4rem;
+    color: var(--text-color-balck);
+}
+
+.navbar a:hover,
+.navbar li.active a {
+    background-color: var(--hover-blue);
+    color: var(--text-color-white);
+}
+
+#menu-icon {
+    display: none;
+    font-size: 2rem;
+    z-index: 10020px;
+    cursor: pointer;
+}
+
+#darkmode {
+    font-size: 1.8rem;
+    color: var(--text-color-balck);
+    cursor: pointer;
+}
+
+#darkmode:hover,
+.logo:hover {
+    color: var(--hover-blue);
+}

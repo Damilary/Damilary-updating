@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Damilary Website created by Damilary Cre8tive Concept">
+    <meta name="keywords" content="HTML5, CSS3, javascript, Responsive, Mobile">
+    <meta name="author" content="Damilary.com" />
+    <title>Damilary | Damilary.com</title>
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="shortcut icon" href="favicon_io/android-chrome-512x512.png" type="image/x-icon" />
+
+    <!-- CSS flies -->
+    <link rel="stylesheet" type="text/css" href="style/index.css">
+    <link rel="stylesheet" type="text/css" href="style/media.css">
+
+    <!-- ANIMATions -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@mojs/core"></script>
+
+    <!-- icon CDN link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.2/css/boxicons.min.css" />
+
+    <!-- Font Awesome 5.15.1 CSS -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css'>
+</head>
+
+<body>
+    <header>
+        <!-- ============================ navigation Bar ====================== -->
+        <nav>
+            <!-- logo -->
+            <div class="wrapper-logo">
+                <a class="logo" href="#home" alt="Damilary spidy logo">
+                    <svg class='bx-burst-hover' width="140" viewBox="0 0 320 100" class="css-1j8o68f">
+                        <g id="SvgjsG1118" featurekey="hmhgWD-0"
+                            transform="matrix(0.14245014245014245,0,0,0.14245014245014245,0.14245014245014245,0.14245014245014245)">
+                            <g xmlns="http://www.w3.org/2000/svg">
+                                <g>
+                                    <g>
+                                        <path
+                                            d="M222,158.3c-31,0.7-57.5,21-79.5,60.8c-23.1,44.8-34.5,94.6-34.3,149.4c0.4,6.6,1.1,7.2,2.2,1.9     c9.3-40.3,19-71.8,29.1-94.6c9.9-22.9,20.9-41.7,32.9-56.2c27.6-32.1,51.5-37.3,71.8-15.6c22.2,25.6,34,68.8,35.4,129.4     c-1.2,81.5-11.9,143.1-32.1,185c-25.3,51-51.3,68-77.7,50.8c-36-28.7-56-92.3-60-190.6c-1.4-3.4-2.7-0.9-3.7,7.5     c-1.9,10.2-3.2,21.4-4,33.3c-3,53.4,4.1,98.7,21.2,135.9c17.5,35.3,40.8,53.2,69.9,53.8c31.4-0.5,60-21,85.9-61.7     c25.8-42.5,42.4-94.3,49.7-155.6c2.7-65.2-6.1-120.7-26.3-166.5c-20.4-43.6-47.1-66-80-67.2">
+                                        </path>
+                                    </g>
+                                    <g>
+                                        <path
+                                            d="M452,134.1c-16.1-26.4-46.9-39.3-92.4-38.5c-50.3,2.4-99.2,17.4-146.6,45c-5.5,3.6-5.7,4.6-0.6,2.9     c39.6-12.1,71.7-19.5,96.4-22.1c24.8-2.9,46.5-2.8,65.1,0.4c41.6,7.9,58.1,26,49.4,54.4c-11.1,32-42.6,63.8-94.4,95.4     c-71.2,39.7-129.9,61.3-176.2,64.7c-56.9,3.6-84.5-10.4-82.8-41.9C77,248.8,122,199.7,205.1,147c2.2-2.9-0.6-2.7-8.3,0.6     c-9.8,3.5-20.1,7.9-30.9,13.2c-47.7,24.1-83.5,52.9-107.1,86.3c-21.8,32.8-25.7,62-11.7,87.4c16.1,26.9,48.2,41.4,96.4,43.5     c49.7,1.1,102.9-10.4,159.6-34.8c57.8-30.3,101.5-65.6,131-106c27.6-39.5,33.6-73.8,18.2-102.9">
+                                        </path>
+                                    </g>
+                                    <g>
+                                        <path
+                                            d="M588,321.2c14.8-27.2,10.6-60.3-12.9-99.3c-27.3-42.4-64.7-77.2-112.3-104.4c-5.9-3-6.8-2.7-2.8,0.9     c30.3,28.2,52.7,52.4,67.4,72.4c14.9,20.1,25.7,38.9,32.2,56.6c14,40,6.5,63.3-22.4,69.9c-33.3,6.4-76.5-5-129.8-34     c-69.9-41.8-118-81.9-144.2-120.2c-31.5-47.5-33.2-78.4-5.1-92.7c42.9-16.8,107.9-2.3,195.1,43.4c3.6,0.4,2.1-1.9-4.7-6.9     c-7.9-6.8-16.9-13.5-26.9-20.2c-44.7-29.3-87.5-45.8-128.3-49.6c-39.3-2.5-66.5,8.7-81.6,33.6c-15.3,27.4-11.8,62.5,10.5,105.2     c23.9,43.6,60.5,83.9,109.9,120.8c55.1,34.9,107.6,55.1,157.3,60.4c48,4.1,80.8-7.8,98.2-35.7">
+                                        </path>
+                                    </g>
+                                    <g>
+                                        <path
+                                            d="M494,532.5c31-0.7,57.5-21,79.5-60.8c23.1-44.8,34.5-94.6,34.3-149.4c-0.4-6.6-1.1-7.2-2.2-1.9     c-9.3,40.3-19,71.8-29.1,94.6c-9.9,22.9-20.9,41.7-32.9,56.2c-27.6,32.1-51.5,37.3-71.8,15.6c-22.2-25.6-34-68.8-35.4-129.4     c1.2-81.5,11.9-143.1,32.1-185c25.3-51,51.3-68,77.7-50.8c36,28.7,56,92.3,60,190.6c1.4,3.4,2.7,0.9,3.7-7.5     c1.9-10.2,3.2-21.4,4-33.3c3-53.4-4.1-98.7-21.2-135.9c-17.5-35.3-40.8-53.2-69.9-53.8c-31.4,0.5-60,21-85.9,61.7     c-25.8,42.5-42.4,94.3-49.7,155.6c-2.7,65.2,6.1,120.7,26.3,166.5c20.4,43.6,47.1,66,80,67.2">
+                                        </path>
+                                    </g>
+                                    <g>
+                                        <path
+                                            d="M128,369.6c-14.8,27.2-10.6,60.3,12.9,99.3c27.3,42.4,64.7,77.2,112.3,104.4c5.9,3,6.8,2.7,2.8-0.9     c-30.3-28.2-52.7-52.4-67.4-72.4c-14.9-20.1-25.7-38.9-32.2-56.6c-14-40-6.5-63.3,22.4-69.9c33.3-6.4,76.5,5,129.8,34     c69.9,41.8,118,81.9,144.2,120.2c31.5,47.5,33.2,78.4,5.1,92.7c-42.9,16.8-107.9,2.3-195.1-43.4c-3.6-0.4-2.1,1.9,4.7,6.9     c7.9,6.8,16.9,13.5,26.9,20.2c44.7,29.3,87.5,45.8,128.3,49.6c39.3,2.5,66.5-8.7,81.6-33.6c15.3-27.4,11.8-62.5-10.5-105.2     c-23.9-43.6-60.5-83.9-109.9-120.8c-55.1-34.9-107.6-55.1-157.3-60.4c-48-4.1-80.8,7.8-98.2,35.7">
+                                        </path>
+                                    </g>
+                                    <g>
+                                        <path
+                                            d="M264,556.7c16.1,26.4,46.9,39.3,92.4,38.5c50.3-2.4,99.2-17.4,146.6-45c5.5-3.6,5.7-4.6,0.6-2.9     c-39.6,12.1-71.7,19.5-96.4,22.1c-24.8,2.9-46.5,2.8-65.1-0.4c-41.6-7.9-58.1-26-49.4-54.4c11.1-32,42.6-63.8,94.4-95.4     c71.2-39.7,129.9-61.3,176.2-64.7c56.9-3.6,84.5,10.4,82.8,41.9c-6.9,45.5-51.9,94.6-135.1,147.3c-2.2,2.9,0.6,2.7,8.3-0.6     c9.8-3.5,20.1-7.9,30.9-13.2c47.7-24.1,83.5-52.9,107.1-86.3c21.8-32.8,25.7-62,11.7-87.4c-16.1-26.9-48.2-41.4-96.3-43.5     c-49.7-1.1-102.9,10.4-159.6,34.8c-57.8,30.3-101.5,65.6-131,106c-27.6,39.5-33.6,73.8-18.2,102.9">
+                                        </path>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                </a>
+                <a class="damilary" href="#home" alt="Damilarylogo">
+                    DAMILARY
+                </a>
+            </div>
+
+            <!-- button for responsive device -->
+            <div class="bx bx-menu" id="menu-icon"></div>
+
+            <!-- menu items -->
+            <ul class="navbar">
+                <li class="active"><a class="smoothScroll" href="#home">Home</a></li>
+                <li><a class="smoothScroll" href="#skills">Skills</a></li>
+                <li><a class="smoothScroll" href="#services">Services</a></li>
+                <li><a class="smoothScroll" href="#portfolio">Portfolio</a></li>
+                <li><a class="smoothScroll" href="#about">About</a></li>
+                <li><a class="smoothScroll" href="#contact">Contact</a></li>
+            </ul>
+
+            <!-- darkmode button -->
+            <!-- <div class="bx bx-moon" id="darkmode"></div> -->
+        </nav>
+    </header>
+
+    <main>
+        <!-- ============================== Home Section ========================= -->
+        <section class="home" id="home">
+            <div class="overlay"></div>
+
+            <!-- home content -->
+            <div class="home-content">
+                <div class="container">
+                    <span>Hello I'm</span>
+                    <h1>Damilary
+                        <span class="txt-type" data-wait="3000"
+                            data-words='["The Developer", "The Designer", "The Creator"]'></span>
+                    </h1>
+                    <!-- <h2>Welcome To My Website</h2> -->
+                    <p class="home-description">
+                        I am a Frontend Developer with experience building websites for small and medium-sized
+                        businesses&period;
+                    </p>
+                    <!-- Banner contact button -->
+                    <div class="banner-contact">
+                        <a href="#contact" class="btn smoothScroll">Contact Me</a>
+                    </div>
+                </div>
+            </div>
+
+            <a id="down-icon" class="down-icon smoothScroll" href="#skills">
+                <img class="down-arrow" src="img/down_icon.svg" alt="Down arrow">
+            </a>
+        </section>
+
+        <!-- ====================== Skills Section ========================= -->
+        <section class="skills" id="skills">
+            <div class="heading">
+                <h2>Skills</h2>
+                <span> My Skills</span>
+            </div>
+
+            <!-- Skills content -->
+            <div class="skills-container">
+                <!-- image -->
+                <div class="skills-img">
+                    <img src="pictures/reshot-illustration-web-design-elements-QYF4GLMV72.jpg"
+                        alt="reshot-illustration-web-design-elements-QYF4GLMV72.jpg" />
+                </div>
+
+                <div class="bars">
+                    <!-- box-1 -->
+                    <div class="bars-box">
+                        <h3>HTML</h3>
+                        <span>94%</span>
+                        <div class="light-bar"></div>
+                        <div class="percent-bar html-bar"></div>
+                    </div>
+
+                    <!-- box-2 -->
+                    <div class="bars-box">
+                        <h3>CSS</h3>
+                        <span>84%</span>
+                        <div class="light-bar"></div>
+                        <div class="percent-bar css-bar"></div>
+                    </div>
+
+                    <!-- box-3 -->
+                    <div class="bars-box">
+                        <h3>JavaScript</h3>
+                        <span>74%</span>
+                        <div class="light-bar"></div>
+                        <div class="percent-bar js-bar"></div>
+                    </div>
+
+                    <!-- box-4 -->
+                    <div class="bars-box">
+                        <h3>React</h3>
+                        <span>80%</span>
+                        <div class="light-bar"></div>
+                        <div class="percent-bar react-bar"></div>
+                    </div>
+
+                    <!-- Skills button -->
+                    <div class="skills-btn">
+                        <a href="/My Portfolio Website 3.0/skill.html" class="btn">My Skills</a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ============================== Service Box ================== -->
+        <section class="services" id="services">
+            <div class="heading">
+                <h2>Services</h2>
+                <span>Our Services</span>
+            </div>
+
+            <div class="services-content">
+
+                <!-- box-1 -->
+                <div class="services-box">
+                    <i class="bx bx-server"></i>
+                    <h3>Logo Design</h3>
+                    <a href="">learn More</a>
+                </div>
+
+                <!-- box-2 -->
+                <div class="services-box">
+                    <i class="bx bx-server"></i>
+                    <h3>Branding</h3>
+                    <a href="">learn More</a>
+                </div>
+
+                <!-- box-2 -->
+                <div class="services-box">
+                    <i class="bx bx-server"></i>
+                    <h3>Graphic Design</h3>
+                    <a href="">learn More</a>
+                </div>
+
+                <!-- box-3 -->
+                <div class="services-box">
+                    <i class="bx bx-brush"></i>
+                    <h3>UI/UX Design</h3>
+                    <a href="">learn More</a>
+                </div>
+
+                <!-- box-1 -->
+                <div class="services-box">
+                    <i class="bx bx-code-alt"></i>
+                    <h3>Website Development</h3>
+                    <a href="">learn More</a>
+                </div>
+
+                <!-- box-1 -->
+                <div class="services-box">
+                    <i class='bx bxs-cart-alt'></i>
+                    <h3>E - Commerce Development</h3>
+                    <a href="">learn More</a>
+                </div>
+
+                <!-- box-4 -->
+                <div class="services-box">
+                    <i class="bx bxl-wordpress"></i>
+                    <h3>Wordpress Developer</h3>
+                    <a href="">learn More</a>
+                </div>
+
+                <!-- box-5 -->
+                <div class="services-box">
+                    <i class="bx bx-code-alt"></i>
+                    <h3>Digital Marketing</h3>
+                    <a href="">learn More</a>
+                </div>
+            </div>
+
+            <!-- Services button -->
+            <div class="services-btn">
+                <a href="/My Portfolio Website 3.0/service.html" class="btn">My services</a>
+            </div>
+        </section>
+
+        <!-- ======================== Portfolio section ========================= -->
+        <section class="portfolio" id="portfolio">
+            <div class="heading">
+                <h2>Portfolio</h2>
+                <span>Our Recent Work</span>
+            </div>
+
+            <div class="portfolio-content">
+                <!-- box-1 -->
+                <div class="portfolio-img">
+                    <a href="pictures/Screenshot 2022-09-07 094732.png" target="_self">
+                        <img src="pictures/Screenshot 2022-09-07 094732.png" alt="Crypto Algos" />
+                    </a>
+                </div>
+
+                <!-- box-2 -->
+                <div class="portfolio-img">
+                    <a href="pictures/Screenshot 2022-09-07 094732.png" target="_self">
+                        <img src="pictures/Screenshot 2022-09-07 094732.png" alt="Crypto Algos" />
+                    </a>
+                </div>
+
+                <!-- box-3 -->
+                <div class="portfolio-img">
+                    <a href="pictures/Screenshot 2022-09-07 094732.png" target="_self">
+                        <img src="pictures/Screenshot 2022-09-07 094732.png" alt="Crypto Algos" />
+                    </a>
+                </div>
+
+                <!-- box-4 -->
+                <div class="portfolio-img">
+                    <a href="pictures/Screenshot 2022-09-07 094732.png" target="_self">
+                        <img src="pictures/Screenshot 2022-09-07 094732.png" alt="Crypto Algos" />
+                    </a>
+                </div>
+
+                <!-- box-5 -->
+                <div class="portfolio-img">
+                    <a href="pictures/Screenshot 2022-09-07 094732.png" target="_self">
+                        <img src="pictures/Screenshot 2022-09-07 094732.png" alt="Crypto Algos" />
+                    </a>
+                </div>
+
+                <!-- box-6 -->
+                <div class="portfolio-img">
+                    <a href="pictures/Screenshot 2022-09-07 094732.png" target="_self">
+                        <img src="pictures/Screenshot 2022-09-07 094732.png" alt="Crypto Algos" />
+                    </a>
+                </div>
+            </div>
+            <!-- Portfolio button -->
+            <div class="portfolio-btn">
+                <a href="/My Portfolio Website 3.0/portfolio.html" class="btn">My Work</a>
+            </div>
+        </section>
+
+        <!-- =============================== About section============== -->
+        <section class="about" id="about">
+
+
+            <!-- about content -->
+            <div class="about-container">
+                <!-- image -->
+                <div class="about-img">
+                    <img src="home image/IMG-20211018-WA0014.jpg" alt="about-img" />
+                </div>
+                <!-- text -->
+                <div class="about-text">
+                    <!-- heading -->
+                    <div class="heading">
+                        <h2>About Me</h2>
+                        <span>Introduction</span>
+                    </div>
+                    
+                    <p>I&apos;m a <strong>Frontend Developer</strong> who specializes in helping small businesses create stunning
+                        websites💻&period; That&apos;s not all! I can
+                        also help you market your business and increase sales📈&comma; I am skilled in
+                        <a href="">HTML</a> and <a href="">CSS</a>&comma; <a href="">Javascript</a>&comma;
+                        <a href="">React</a>&comma; <a href="">WordPress</a>&comma; and <a href="">SEO</a>&period;
+                        I will manage your project with a full brief from start to finish&period;
+                        Regular communication is essential to me&comma; So&comma; if you&apos;re looking to make your website or online store
+                        stand out&comma; let&apos;s chat and see how we can get it done together&period;
+                    </p>
+                    
+                    <!-- some information -->
+                    <div class="information">
+                        <!-- box-1 -->
+                        <div class="info-box">
+                            <i class="bx bxs-user"></i>
+                            <span>Abdulrahmon Damilare Jimoh</span>
+                        </div>
+
+                        <!-- box-2 -->
+                        <div class="info-box">
+                            <i class="bx bxs-phone"></i>
+                            <span>+234 708 0984 078</span>
+                        </div>
+
+                        <!-- box-3 -->
+                        <div class="info-box">
+                            <i class="bx bxs-envelope"></i>
+                            <span>Damilary@outlook.com</span>
+                        </div>
+
+                        <!-- About button -->
+                        <div class="float-left">
+                            <div class="about-btn">
+                                <a href="/My Portfolio Website 3.0/about.html" class="btn">Download CV</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====================== contact form ======================== -->
+        <section class="contact" id="contact">
+            <div class="contact-heading">
+                <div class="heading">
+                    <h2>Contact</h2>
+                    <!-- <span>Contact With Us</span> -->
+                </div>
+            </div>
+
+            <div class="contact-container">
+                <div class="contact-wrapper">
+                    <div class="wrapper">
+                        <div class="form-head">
+                            <p>Kindly Get In Touch With Us...</p>
+                        </div>
+
+                        <!-- form -->
+                        <div class="contact-form">
+                            <form action="https://formsubmit.co/18f593ef238b0746f75fc6f8f64b2ed5" method="POST">
+                                <!-- Honeypot -->
+                                <input type="text" name="_honey" style="display: none;">
+
+                                <!-- Disable Captcha -->
+                                <input type="hidden" name="_captcha" value="false">
+
+
+                                <!-- Name, Email, Tel, & Message area -->                                
+                                <input class="name-box" type="name" placeholder="Your Name" name="Name" id="Name"
+                                    required aria-required="true" autocorrect="off" autocomplete="Name"
+                                    aria-label="Your Name"
+                                />
+
+                                <input class="email-box" type="email" placeholder="Your email" name="Email" id="Email"
+                                    required aria-required="true" autocorrect="off" autocomplete="email"
+                                    aria-label="Your Email"
+                                />
+
+                                <input class="number-box" type="tel" placeholder="Your Number" name="Number" id="Number"
+                                    required aria-required="true" autocorrect="off" autocomplete="tel-national"
+                                    aria-label="Your Number"
+                                />
+
+                                <textarea name="Message" id="message" cols="30" rows="10"
+                                    placeholder="Write Message Here....">
+                                </textarea>
+
+                                <!-- Contact button -->
+                                <div class="contact-btn">
+                                    <button class="contact-button" type="submit" id="Send" aria-label="Send"
+                                        role="button">Send
+                                    </button>
+                                </div>
+
+                                <!-- Next page will be displayed -->
+                                <input type="hidden" name="_next" value="/My Portfolio Website 3.0/thanks.html">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- =========================== footer section ======================== -->
+    <footer class="footer-section" id="footer">
+        <div class="footer-container">
+            <div class="footer-wrapper">
+                <div class="damilary-logo">
+                    <a class="damilary-logo-link" href="http://www.damilary.com">DAMILARY</a>
+                </div>
+
+                <div class="description">
+                    <p>The premier e-commerce destination for men and women&apos;s style
+                        combining the best brands that focus on craftsmanship and elegance&period;
+                    </p>
+                </div>
+
+                <ul class="footer-social">
+                    <li>
+                        <a href="https://facebook.com/damilary/" role="link" target="_blank" rel="noopener">
+                            <svg class="footer-social-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+                                <!-- Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                                <path
+                                    d="M25,15 C25,9.48 20.52,5 15,5 C9.48,5 5,9.48 5,15 C5,19.84 8.44,23.87 13,24.8 L13,18 L11,18 L11,15 L13,15 L13,12.5 C13,10.57 14.57,9 16.5,9 L19,9 L19,12 L17,12 C16.45,12 16,12.45 16,13 L16,15 L19,15 L19,18 L16,18 L16,24.95 C21.05,24.45 25,20.19 25,15 Z"
+                                    id="Path" fill-rule="nonzero">
+                            </svg>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://instagram.com/dami.lary/" role="link" target="_blank" target="_blank"
+                            rel="noopener">
+                            <svg class="footer-social-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+                                <!-- Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                                <path
+                                    d="M15,5 C17.717,5 18.056,5.01 19.122,5.06 C20.187,5.11 20.912,5.277 21.55,5.525 C22.21,5.779 22.766,6.123 23.322,6.678 C23.8304937,7.17789596 24.2239536,7.78258896 24.475,8.45 C24.722,9.087 24.89,9.813 24.94,10.878 C24.987,11.944 25,12.283 25,15 C25,17.717 24.99,18.056 24.94,19.122 C24.89,20.187 24.722,20.912 24.475,21.55 C24.2246766,22.2177765 23.8311207,22.822617 23.322,23.322 C22.8219615,23.8303192 22.2173093,24.2237526 21.55,24.475 C20.913,24.722 20.187,24.89 19.122,24.94 C18.056,24.987 17.717,25 15,25 C12.283,25 11.944,24.99 10.878,24.94 C9.813,24.89 9.088,24.722 8.45,24.475 C7.78232618,24.2244734 7.17752722,23.8309445 6.678,23.322 C6.16940644,22.8221857 5.77593123,22.2174693 5.525,21.55 C5.277,20.913 5.11,20.187 5.06,19.122 C5.013,18.056 5,17.717 5,15 C5,12.283 5.01,11.944 5.06,10.878 C5.11,9.812 5.277,9.088 5.525,8.45 C5.7752361,7.7821794 6.16880364,7.17732106 6.678,6.678 C7.17767098,6.16923123 7.78242858,5.77572924 8.45,5.525 C9.088,5.277 9.812,5.11 10.878,5.06 C11.944,5.013 12.283,5 15,5 Z M15,10 C12.2385763,10 10,12.2385763 10,15 C10,17.7614237 12.2385763,20 15,20 C17.7614237,20 20,17.7614237 20,15 C20,12.2385763 17.7614237,10 15,10 L15,10 Z M21.5,9.75 C21.5,9.05964406 20.9403559,8.5 20.25,8.5 C19.5596441,8.5 19,9.05964406 19,9.75 C19,10.4403559 19.5596441,11 20.25,11 C20.9403559,11 21.5,10.4403559 21.5,9.75 Z M15,12 C16.6568542,12 18,13.3431458 18,15 C18,16.6568542 16.6568542,18 15,18 C13.3431458,18 12,16.6568542 12,15 C12,13.3431458 13.3431458,12 15,12 Z"
+                                    id="Shape" fill-rule="nonzero">
+                            </svg>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="" role="link" target="_blank" rel="noopener">
+                            <svg class="footer-social-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+                                <!-- Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                                <path
+                                    d="M25.162,8.656 C24.398557,8.99369373 23.5889601,9.21547339 22.76,9.314 C23.6337508,8.79143332 24.2877055,7.96901423 24.6,7 C23.78,7.488 22.881,7.83 21.944,8.015 C20.6498495,6.63031951 18.5862776,6.28908903 16.9152663,7.18345292 C15.244255,8.07781681 14.3836288,9.98414575 14.818,11.829 C11.4550225,11.6604433 8.32174389,10.0719946 6.198,7.459 C5.82629012,8.09745032 5.63095514,8.82322672 5.632,9.562 C5.632,11.012 6.37,12.293 7.492,13.043 C6.82800881,13.0220962 6.1786324,12.8427806 5.598,12.52 L5.598,12.572 C5.59841319,14.5630358 7.00151442,16.2781232 8.953,16.673 C8.33661503,16.8400369 7.69030669,16.8646582 7.063,16.745 C7.61012698,18.4491831 9.18045142,19.6167778 10.97,19.65 C9.21794158,21.0260194 6.99074,21.6491034 4.779,21.382 C6.69069779,22.6114328 8.91609682,23.2641239 11.189,23.2620052 C18.882,23.2620052 23.089,16.889 23.089,11.362 C23.089,11.182 23.084,11 23.076,10.822 C23.8948641,10.2301677 24.6015987,9.49701939 25.163,8.657 L25.162,8.656 Z"
+                                    id="Shape" fill-rule="nonzero">
+                            </svg>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="" role="link" target="_blank" rel="noopener">
+                            <svg class="footer-social-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+                                <!-- Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                                <path
+                                    d="M24.543,9.498 C25,11.28 25,15 25,15 C25,15 25,18.72 24.543,20.502 C24.289,21.487 23.546,22.262 22.605,22.524 C20.896,23 15,23 15,23 C15,23 9.107,23 7.395,22.524 C6.45,22.258 5.708,21.484 5.457,20.502 C5,18.72 5,15 5,15 C5,15 5,11.28 5.457,9.498 C5.711,8.513 6.454,7.738 7.395,7.476 C9.107,7 15,7 15,7 C15,7 20.896,7 22.605,7.476 C23.55,7.742 24.292,8.516 24.543,9.498 Z M13,18.5 L19,15 L13,11.5 L13,18.5 Z"
+                                    id="Shape" fill-rule="nonzero">
+                            </svg>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="" role="link" target="_blank" rel="noopener">
+                            <svg class="footer-social-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+                                <!-- Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                                <path
+                                    d="M16.37,5.094 C11.4222834,4.41338947 6.7306589,7.48647853 5.37780018,12.2940666 C4.02494146,17.1016548 6.42542854,22.1704691 11.002,24.17 C10.9421482,23.4018132 10.9970846,22.6289957 11.165,21.877 C11.35,21.038 12.461,16.414 12.461,16.414 C12.2397678,15.918097 12.1292052,15.3799573 12.137,14.837 C12.137,13.352 12.994,12.244 14.06,12.244 C14.4475058,12.2383596 14.8183096,12.4015155 15.0759485,12.6910233 C15.3335874,12.980531 15.4525906,13.3677694 15.402,13.752 C15.402,14.652 14.824,16.014 14.522,17.292 C14.4009628,17.7673218 14.512969,18.2718771 14.8237595,18.6513374 C15.1345499,19.0307977 15.607148,19.2400165 16.097,19.215 C17.995,19.215 19.267,16.784 19.267,13.914 C19.267,11.714 17.81,10.066 15.124,10.066 C13.8253381,10.0155368 12.5627981,10.4998448 11.6310506,11.4058889 C10.6993031,12.311933 10.1798756,13.5604348 10.194,14.86 C10.1653685,15.5733235 10.3955035,16.2729622 10.842,16.83 C11.0134007,16.9579472 11.0794633,17.1838651 11.004,17.384 C10.958,17.568 10.842,18.007 10.796,18.168 C10.7765949,18.2787249 10.7057542,18.3736519 10.6051307,18.4237664 C10.5045072,18.4738808 10.3860626,18.4732252 10.286,18.422 C8.902,17.868 8.25,16.345 8.25,14.606 C8.25,11.759 10.634,8.351 15.404,8.351 C19.2,8.351 21.724,11.128 21.724,14.098 C21.724,18.007 19.547,20.946 16.33,20.946 C15.3528384,20.977238 14.4273785,20.5073427 13.876,19.7 C13.876,19.7 13.298,22.016 13.184,22.454 C12.9512921,23.2107023 12.6079075,23.9288108 12.165,24.585 C13.088,24.865 14.047,25.005 15.011,25.0010833 C17.6639692,25.0031279 20.208789,23.9497029 22.0840654,22.0731133 C23.9593418,20.1965237 25.0109851,17.650967 25.0070113,14.998 C25.0044317,10.0042335 21.318907,5.77751081 16.372,5.095 L16.37,5.094 Z"
+                                    id="Shape" fill-rule="nonzero">
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="navigation">
+                <!-- footer navigator -->
+                <ul class="footer-navigator">
+                    <li>
+                        <a href="#" rel="noopener">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="#" rel="noopener">Services</a>
+                    </li>
+                    <li>
+                        <a href="#" rel="noopener">Contact Details</a>
+                    </li>
+                    <li>
+                        <a href="#" rel="noopener">Skills</a>
+                    </li>
+                    <li>
+                        <a href="#" rel="noopener">Portfolio</a>
+                    </li>
+                    <li>
+                        <a href="#" rel="noopener">About Details</a>
+                    </li>
+                    <li>
+                        <a href="#" rel="noopener">Social Media</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- copyright -->
+        <div class="copyright">
+            <p class="copyright">©<span id="year">2022</span> - <a href="http://www.damilary.com">Created & Designed By
+                    Damilary Cre8tive Concept</a> | All Right Reservered&period;
+            </p>
+        </div>
+    </footer>
+
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/smooth-scroll.min.js"></script>
+    <script type="text/javascript" src="js/modernizr.mq.js"></script>
+    <script type="text/javascript" src="js/slick.min.js"></script>
+
+    <!-- Main JS -->
+    <script src="js/index.js"></script>
+    <script src="js/typewriter.js"></script>
+
+    <!-- dark/light mode.js -->
+    <script src="js/dark mode.js"></script>
+
+    <!-- chat-plugins.js -->
+    <!-- <script src="js/plugins.js"></script> -->
+</body>
+
+</html>
