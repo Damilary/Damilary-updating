@@ -3,8 +3,8 @@ Project:        Damilary typewriter - by Damilary.com
 Version:        1.0
 Last change:    27/12/2022
 Author:         Damilary Cre8tive Concept
-URL:            http://damilary.com
-License:        http://damilary.com/pages/license
+URL:            https://damilary.com
+License:        https://damilary.com/pages/license
 -------------------------------------------------------------------*/
 const TypeWriter = function (txtElement, words, wait = 3000) {
     this.txtElement = txtElement;
@@ -33,7 +33,11 @@ TypeWriter.prototype.type = function () {
     }
 
     // Insert txt into element
-    this.txtElement.innerHTML = `<span class="txt">${this.txt}</span>`;
+    const span = document.createElement('span');
+    span.className = 'txt';
+    span.textContent = this.txt;
+    this.txtElement.textContent = '';
+    this.txtElement.appendChild(span);
 
     // Initial Type Speed
     let typeSpeed = 300;
