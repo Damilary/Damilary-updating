@@ -62,7 +62,9 @@ TypeWriter.prototype.type = function () {
 
 
 // Init On DOM Load
-document.addEventListener('DOMContentLoaded', init);
+if (typeof document !== 'undefined') {
+    document.addEventListener('DOMContentLoaded', init);
+}
 
 // Init App
 function init() {
@@ -71,4 +73,9 @@ function init() {
     const wait = txtElement.getAttribute('data-wait');
     // Init TypeWriter
     new TypeWriter(txtElement, words, wait);
+}
+
+// Export for testing
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = TypeWriter;
 }
