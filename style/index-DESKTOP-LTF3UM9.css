@@ -242,13 +242,8 @@ nav {
     cursor: pointer;
 }
 
-#darkmode {
-    font-size: 1.8rem;
-    color: var(--text-color-balck);
-    cursor: pointer;
-}
 
-#darkmode:hover,
+
 .logo:hover {
     color: var(--hover-blue);
 }
