@@ -3,15 +3,16 @@ Project:        Damilary typewriter - by Damilary.com
 Version:        1.0
 Last change:    27/12/2022
 Author:         Damilary Cre8tive Concept
-URL:            http://damilary.com
-License:        http://damilary.com/pages/license
+URL:            https://damilary.com
+License:        https://damilary.com/pages/license
 -------------------------------------------------------------------*/
 const TypeWriter = function (txtElement, words, wait = 3000) {
     this.txtElement = txtElement;
     this.words = words;
     this.txt = '';
     this.wordIndex = 0;
-    this.wait = parseInt(wait, 10);
+    const waitInt = parseInt(wait, 10);
+    this.wait = isNaN(waitInt) ? 3000 : waitInt;
     this.type();
     this.isDeleting = false;
 }
@@ -33,7 +34,11 @@ TypeWriter.prototype.type = function () {
     }
 
     // Insert txt into element
-    this.txtElement.innerHTML = `<span class="txt">${this.txt}</span>`;
+    const span = document.createElement('span');
+    span.className = 'txt';
+    span.textContent = this.txt;
+    this.txtElement.textContent = '';
+    this.txtElement.appendChild(span);
 
     // Initial Type Speed
     let typeSpeed = 300;
@@ -67,8 +72,22 @@ document.addEventListener('DOMContentLoaded', init);
 // Init App
 function init() {
     const txtElement = document.querySelector('.txt-type');
-    const words = JSON.parse(txtElement.getAttribute('data-words'));
-    const wait = txtElement.getAttribute('data-wait');
+    if (!txtElement) return;
+
+    let words;
+    try {
+        words = JSON.parse(txtElement.getAttribute('data-words'));
+    } catch (e) {
+        words = ["The Developer", "The Designer", "The Creator"];
+    }
+
+    if (!Array.isArray(words)) {
+        words = ["The Developer", "The Designer", "The Creator"];
+    }
+
+    const waitAttr = txtElement.getAttribute('data-wait');
+    const wait = waitAttr ? parseInt(waitAttr, 10) : 3000;
+
     // Init TypeWriter
-    new TypeWriter(txtElement, words, wait);
+    new TypeWriter(txtElement, words, isNaN(wait) ? 3000 : wait);
 }

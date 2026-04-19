@@ -3,8 +3,8 @@ Project:        Damilary - by Damilary.com
 Version:        3.0
 Last change:    27/12/2022
 Author:         Damilary Cre8tive Concept
-URL:            http://damilary.com
-License:        http://damilary.com/pages/license
+URL:            https://damilary.com
+License:        https://damilary.com/pages/license
 -------------------------------------------------------------------*/
 
 // Navigation toggle button
