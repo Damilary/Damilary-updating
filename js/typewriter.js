@@ -11,7 +11,8 @@ const TypeWriter = function (txtElement, words, wait = 3000) {
     this.words = words;
     this.txt = '';
     this.wordIndex = 0;
-    this.wait = parseInt(wait, 10);
+    const waitInt = parseInt(wait, 10);
+    this.wait = isNaN(waitInt) ? 3000 : waitInt;
     this.type();
     this.isDeleting = false;
 }
@@ -71,8 +72,22 @@ document.addEventListener('DOMContentLoaded', init);
 // Init App
 function init() {
     const txtElement = document.querySelector('.txt-type');
-    const words = JSON.parse(txtElement.getAttribute('data-words'));
-    const wait = txtElement.getAttribute('data-wait');
+    if (!txtElement) return;
+
+    let words;
+    try {
+        words = JSON.parse(txtElement.getAttribute('data-words'));
+    } catch (e) {
+        words = ["The Developer", "The Designer", "The Creator"];
+    }
+
+    if (!Array.isArray(words)) {
+        words = ["The Developer", "The Designer", "The Creator"];
+    }
+
+    const waitAttr = txtElement.getAttribute('data-wait');
+    const wait = waitAttr ? parseInt(waitAttr, 10) : 3000;
+
     // Init TypeWriter
-    new TypeWriter(txtElement, words, wait);
+    new TypeWriter(txtElement, words, isNaN(wait) ? 3000 : wait);
 }
