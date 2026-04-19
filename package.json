@@ -1,0 +1,12 @@
+{
+  "name": "damilary-updating",
+  "version": "1.0.0",
+  "description": "Portfolio website",
+  "main": "js/index.js",
+  "scripts": {
+    "test": "jest --env=node"
+  },
+  "devDependencies": {
+    "jest": "^29.0.0"
+  }
+}
