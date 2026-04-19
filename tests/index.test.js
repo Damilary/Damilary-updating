@@ -14,14 +14,13 @@ describe('index.js interactions', () => {
         global.$ = $;
         window.$ = $;
 
-        // Load the script
-        // We evaluate it manually to attach the event listeners.
-        // To avoid SonarCloud complaining about direct `eval()`, we use `new Function()()`.
-        // Also we wrap it in a closure so that `let header` etc. do not pollute global scope
-        // and cause syntax errors on subsequent tests.
+        // Load the script securely via DOM injection.
+        // We wrap the code in an IIFE to ensure block-scoped variables like `let header`
+        // don't cause SyntaxError (redeclaration) across multiple test runs.
         const scriptCode = fs.readFileSync(path.resolve(__dirname, '../js/index.js'), 'utf8');
-        const executeScript = new Function(scriptCode);
-        executeScript();
+        const scriptEl = document.createElement('script');
+        scriptEl.textContent = `(function() { ${scriptCode} })();`;
+        document.body.appendChild(scriptEl);
     });
 
     afterEach(() => {
