@@ -31,9 +31,10 @@ if (form && usernameInput && passwordInput) {
 
 function showError(input, message) {
   if (!input) return;
-  const formGroup = input.parentElement;
+  const formGroup = input.closest('.form-group');
   if (!formGroup) return;
-  formGroup.className = 'form-group error';
+  formGroup.classList.add('error');
+  formGroup.classList.remove('success');
   const errorMessage = formGroup.querySelector('small');
   if (errorMessage) {
     errorMessage.innerText = message;
