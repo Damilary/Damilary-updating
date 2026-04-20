@@ -11,17 +11,25 @@ const TypeWriter = function (txtElement, words, wait = 3000) {
     this.words = words;
     this.txt = '';
     this.wordIndex = 0;
-    this.wait = parseInt(wait, 10);
-    this.type();
+    this.wait = parseInt(wait, 10) || 3000;
     this.isDeleting = false;
+
+    // Create the span element once and append it
+    this.spanElement = document.createElement('span');
+    this.spanElement.className = 'txt';
+    this.txtElement.textContent = ''; // Clear any existing content
+    this.txtElement.appendChild(this.spanElement);
+
+    this.type();
 }
 
 // Type Method
 TypeWriter.prototype.type = function () {
     // Current index of word
+    if (!this.words || this.words.length === 0) return;
     const current = this.wordIndex % this.words.length;
     // Get full text of current word
-    const fullTxt = this.words[current];
+    const fullTxt = this.words[current] || '';
 
     // Check if deleting
     if (this.isDeleting) {
@@ -32,8 +40,8 @@ TypeWriter.prototype.type = function () {
         this.txt = fullTxt.substring(0, this.txt.length + 1);
     }
 
-    // Insert txt into element
-    this.txtElement.innerHTML = `<span class="txt">${this.txt}</span>`;
+    // Insert txt into element safely using textContent
+    this.spanElement.textContent = this.txt;
 
     // Initial Type Speed
     let typeSpeed = 300;
