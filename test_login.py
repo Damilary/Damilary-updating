@@ -28,7 +28,7 @@ class TestLogin(unittest.TestCase):
             self.assertIn('error', username_group.get_attribute('class'))
             self.assertEqual(username_group.locator('small').inner_text(), 'Username is required!')
 
-            password_group = page.locator('.form-group').nth(1)
+            password_group = page.locator('.form-group', has=page.locator('#password'))
             self.assertIn('error', password_group.get_attribute('class'))
             self.assertEqual(password_group.locator('small').inner_text(), 'Password is required!')
 
