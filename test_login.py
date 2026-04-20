@@ -24,7 +24,7 @@ class TestLogin(unittest.TestCase):
             page.click('#submit')
 
             # Check for error messages
-            username_group = page.locator('.form-group').first
+            username_group = page.locator('.form-group', has=page.locator('#username'))
             self.assertIn('error', username_group.get_attribute('class'))
             self.assertEqual(username_group.locator('small').inner_text(), 'Username is required!')
 
