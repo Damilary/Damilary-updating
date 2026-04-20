@@ -12,6 +12,12 @@ const TypeWriter = function (txtElement, words, wait = 3000) {
     this.txt = '';
     this.wordIndex = 0;
     this.wait = parseInt(wait, 10);
+
+    // Create span element
+    this.span = document.createElement('span');
+    this.span.className = 'txt';
+    this.txtElement.appendChild(this.span);
+
     this.type();
     this.isDeleting = false;
 }
@@ -33,7 +39,7 @@ TypeWriter.prototype.type = function () {
     }
 
     // Insert txt into element
-    this.txtElement.innerHTML = `<span class="txt">${this.txt}</span>`;
+    this.span.textContent = this.txt;
 
     // Initial Type Speed
     let typeSpeed = 300;
