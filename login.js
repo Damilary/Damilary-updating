@@ -43,9 +43,10 @@ function showError(input, message) {
 
 function showSuccess(input) {
   if (!input) return;
-  const formGroup = input.parentElement;
+  const formGroup = input.closest('.form-group');
   if (!formGroup) return;
-  formGroup.className = 'form-group success';
+  formGroup.classList.add('success');
+  formGroup.classList.remove('error');
   const errorMessage = formGroup.querySelector('small');
   if (errorMessage) {
     errorMessage.innerText = '';
