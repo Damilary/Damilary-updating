@@ -267,6 +267,11 @@
         color: var(--text-color-white);
     }
 
+    #darkmode {
+        position: absolute;
+        top: 1.4rem;
+        right: 2rem;
+    }
 
     .home-content span {
         font-size: 1.5rem;
