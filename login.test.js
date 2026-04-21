@@ -46,7 +46,7 @@ describe('Login Form Validation', () => {
 
     const usernameGroup = usernameInput.parentElement;
     expect(usernameGroup.className).toBe('form-group error');
-    expect(usernameGroup.querySelector('small').innerText).toBe('Username is required!');
+    expect(usernameGroup.querySelector('small').textContent).toBe('Username is required!');
   });
 
   test('shows error when username is less than 3 characters', () => {
