@@ -4,7 +4,7 @@ const initDarkMode = () => {
   const darkmode = document.querySelector("#darkmode");
   if (!darkmode) return;
 
-  darkmode.onclick = () => {
+  darkmode.addEventListener("click", () => {
     if (darkmode.classList.contains("bx-moon")) {
       darkmode.classList.replace("bx-moon", "bx-sun");
       document.body.classList.add("active");
@@ -12,7 +12,7 @@ const initDarkMode = () => {
       darkmode.classList.replace("bx-sun", "bx-moon");
       document.body.classList.remove("active");
     }
-  };
+  });
 };
 
 // Initialize if in browser
