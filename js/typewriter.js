@@ -11,7 +11,15 @@ const TypeWriter = function (txtElement, words, wait = 3000) {
     this.words = words;
     this.txt = '';
     this.wordIndex = 0;
-    this.wait = parseInt(wait, 10);
+    this.wait = parseInt(wait, 10) || 3000;
+
+    // Create span element
+    this.span = document.createElement('span');
+    this.span.className = 'txt';
+    if (this.txtElement) {
+        this.txtElement.appendChild(this.span);
+    }
+
     this.type();
     this.isDeleting = false;
 }
@@ -33,7 +41,7 @@ TypeWriter.prototype.type = function () {
     }
 
     // Insert txt into element
-    this.txtElement.innerHTML = `<span class="txt">${this.txt}</span>`;
+    this.span.textContent = this.txt;
 
     // Initial Type Speed
     let typeSpeed = 300;
@@ -69,13 +77,10 @@ if (typeof document !== 'undefined') {
 // Init App
 function init() {
     const txtElement = document.querySelector('.txt-type');
-    const words = JSON.parse(txtElement.getAttribute('data-words'));
-    const wait = txtElement.getAttribute('data-wait');
-    // Init TypeWriter
-    new TypeWriter(txtElement, words, wait);
-}
-
-// Export for testing
-if (typeof module !== 'undefined' && module.exports) {
-    module.exports = TypeWriter;
+    if (txtElement) {
+        const words = JSON.parse(txtElement.getAttribute('data-words') || '[]');
+        const wait = txtElement.getAttribute('data-wait') || 3000;
+        // Init TypeWriter
+        new TypeWriter(txtElement, words, wait);
+    }
 }
