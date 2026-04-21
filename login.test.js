@@ -42,7 +42,7 @@ describe('Login Form Validation', () => {
     passwordInput.value = 'validpassword';
 
     // Dispatch submit event
-    form.dispatchEvent(new Event('submit'));
+    form.dispatchEvent(new Event('submit', { bubbles: true, cancelable: true }));
 
     const usernameGroup = usernameInput.parentElement;
     expect(usernameGroup.className).toBe('form-group error');
