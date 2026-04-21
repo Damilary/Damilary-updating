@@ -1,7 +1,7 @@
 // darkmode
 
 const initDarkMode = () => {
-  let darkmode = document.querySelector("#darkmode");
+  const darkmode = document.querySelector("#darkmode");
   if (!darkmode) return;
 
   darkmode.onclick = () => {
