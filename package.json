@@ -2,7 +2,7 @@
   "name": "app",
   "version": "1.0.0",
   "description": "PG",
-  "main": "login.js",
+  "main": "js/typewriter.js",
   "scripts": {
     "test": "jest"
   },
