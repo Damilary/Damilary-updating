@@ -33,11 +33,14 @@ TypeWriter.prototype.type = function () {
     }
 
     // Insert txt into element
-    this.txtElement.textContent = '';
-    const span = document.createElement('span');
-    span.className = 'txt';
+    let span = this.txtElement.querySelector('.txt');
+    if (!span) {
+        span = document.createElement('span');
+        span.className = 'txt';
+        this.txtElement.textContent = '';
+        this.txtElement.appendChild(span);
+    }
     span.textContent = this.txt;
-    this.txtElement.appendChild(span);
 
     // Initial Type Speed
     let typeSpeed = 300;
