@@ -70,7 +70,9 @@ TypeWriter.prototype.type = function () {
 
 
 // Init On DOM Load
-document.addEventListener('DOMContentLoaded', init);
+if (typeof document !== 'undefined') {
+    document.addEventListener('DOMContentLoaded', init);
+}
 
 // Init App
 function init() {
