@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/Damilary/Damilary-updating#readme",
   "devDependencies": {
-    "jest": "^29.7.0",
-    "jest-environment-jsdom": "^29.7.0"
+    "jest": "^30.3.0",
+    "jest-environment-jsdom": "^30.3.0"
   }
 }

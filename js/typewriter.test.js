@@ -61,68 +61,45 @@ describe('TypeWriter', () => {
         expect(writer.isDeleting).toBe(true);
     });
 
-    test('should delete characters and move to the next word', () => {
+    test('should cycle through words and loop back to the beginning', () => {
         const words = ['A', 'B'];
         const writer = new TypeWriter(mockElement, words, 1000);
 
-        // In constructor, this.type() is called *before* this.isDeleting is initialized,
-        // but this.type() checks if (!this.isDeleting && this.txt === fullTxt).
-        // It will set this.isDeleting to true.
-        // Wait! In constructor: this.type(); this.isDeleting = false;
-        // So at the end of constructor, isDeleting is false!
-
+        // Initialization: txt = 'A', isDeleting = false, timeout = 1000ms
         expect(writer.txt).toBe('A');
-        expect(writer.isDeleting).toBe(false); // Because constructor overrides it
+        expect(writer.isDeleting).toBe(false);
 
-        // The first timeout was set in type() during constructor to wait=1000.
-        // When that timer fires, type() is called again.
-        // Because isDeleting is currently false, it will add another char? No, txt is already 'A', fullTxt is 'A'.
-        // So type() will see `!this.isDeleting && this.txt === fullTxt` again, set typeSpeed = 1000, isDeleting = true.
+        // Timer fires (1000ms). type() runs. txt = 'A', fullTxt = 'A'.
+        // sets typeSpeed = 1000ms, isDeleting = true
         jest.advanceTimersByTime(1000);
-
         expect(writer.txt).toBe('A');
         expect(writer.isDeleting).toBe(true);
 
-        // Now isDeleting is true. Timer was set to 1000. Advance it.
-        // type() runs, it is deleting. Removes 'A', txt becomes ''.
-        // Sees isDeleting && txt === ''. Sets isDeleting = false, wordIndex = 1, typeSpeed = 500.
+        // Timer fires (1000ms). type() runs, deletes 'A'. txt = ''.
+        // sets typeSpeed = 500ms, isDeleting = false, wordIndex = 1
         jest.advanceTimersByTime(1000);
-
         expect(writer.txt).toBe('');
         expect(writer.isDeleting).toBe(false);
-        expect(writer.wordIndex).toBe(1); // Moved to next word
+        expect(writer.wordIndex).toBe(1);
 
-        // Now advance past the 500ms pause. It types 'B'.
+        // Timer fires (500ms). type() runs, types 'B'. txt = 'B', fullTxt = 'B'.
+        // sets typeSpeed = 1000ms, isDeleting = true
         jest.advanceTimersByTime(500);
-
-        // It types 'B'
         expect(writer.txt).toBe('B');
-    });
-
-    test('should loop back to the first word', () => {
-        const words = ['A'];
-        const writer = new TypeWriter(mockElement, words, 1000);
-
-        // Constructor types 'A', isDeleting = false. Timeout set to 1000.
-        expect(writer.txt).toBe('A');
-        expect(writer.isDeleting).toBe(false);
-
-        // Advance 1000ms. type() runs, sees word is complete, isDeleting = true. Timeout set to 1000.
-        jest.advanceTimersByTime(1000);
-        expect(writer.txt).toBe('A');
         expect(writer.isDeleting).toBe(true);
 
-        // Advance 1000ms. type() runs, deletes 'A'. isDeleting = false, wordIndex = 1. Timeout set to 500.
+        // Timer fires (1000ms). type() runs, deletes 'B'. txt = ''.
+        // sets typeSpeed = 500ms, isDeleting = false, wordIndex = 2
         jest.advanceTimersByTime(1000);
         expect(writer.txt).toBe('');
         expect(writer.isDeleting).toBe(false);
-        expect(writer.wordIndex).toBe(1);
+        expect(writer.wordIndex).toBe(2);
 
-        // Advance 500ms to type 'A' again (since 1 % 1 = 0)
+        // Timer fires (500ms). type() runs, types 'A'. txt = 'A', fullTxt = 'A'.
+        // sets typeSpeed = 1000ms, isDeleting = true
         jest.advanceTimersByTime(500);
-
-        // Type 'A' again
         expect(writer.txt).toBe('A');
-        expect(writer.wordIndex).toBe(1);
+        expect(writer.isDeleting).toBe(true);
+        expect(writer.wordIndex % writer.words.length).toBe(0);
     });
 });
