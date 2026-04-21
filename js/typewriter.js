@@ -11,7 +11,15 @@ const TypeWriter = function (txtElement, words, wait = 3000) {
     this.words = words;
     this.txt = '';
     this.wordIndex = 0;
-    this.wait = parseInt(wait || 3000, 10);
+    this.wait = parseInt(wait, 10) || 3000;
+
+    // Create span element
+    this.span = document.createElement('span');
+    this.span.className = 'txt';
+    if (this.txtElement) {
+        this.txtElement.appendChild(this.span);
+    }
+
     this.type();
     this.isDeleting = false;
 }
@@ -33,14 +41,7 @@ TypeWriter.prototype.type = function () {
     }
 
     // Insert txt into element
-    let span = this.txtElement.querySelector('.txt');
-    if (!span) {
-        span = document.createElement('span');
-        span.className = 'txt';
-        this.txtElement.textContent = '';
-        this.txtElement.appendChild(span);
-    }
-    span.textContent = this.txt;
+    this.span.textContent = this.txt;
 
     // Initial Type Speed
     let typeSpeed = 300;
@@ -75,9 +76,8 @@ document.addEventListener('DOMContentLoaded', init);
 function init() {
     const txtElement = document.querySelector('.txt-type');
     if (txtElement) {
-        const wordsAttribute = txtElement.getAttribute('data-words');
-        const words = wordsAttribute ? JSON.parse(wordsAttribute) : [];
-        const wait = txtElement.getAttribute('data-wait');
+        const words = JSON.parse(txtElement.getAttribute('data-words') || '[]');
+        const wait = txtElement.getAttribute('data-wait') || 3000;
         // Init TypeWriter
         new TypeWriter(txtElement, words, wait);
     }
